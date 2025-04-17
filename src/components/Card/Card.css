@@ -1,0 +1,105 @@
+.card {
+    box-shadow: 3px 1px 21px -2px #8c8c8c;
+    border-radius: 29px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    height: 100%;
+    width: 290px; /* デスクトップサイズの幅を固定 */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__name {
+    padding: 0;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.card__type {
+    text-align: center;
+}
+
+.typeName {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #e8a4b8;
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.cardInfo {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cardDate {
+    margin: 5px 0;
+}
+
+.title {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 767px) {
+    .card {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* 正方形にする */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    
+    .card__name {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+    
+    .typeName {
+        font-size: 10px;
+        padding: 2px 4px;
+        margin: 1px;
+    }
+    
+    .cardInfo {
+        margin-top: 2px;
+    }
+    
+    .cardDate {
+        margin: 1px 0;
+    }
+    
+    .title {
+        font-size: 10px;
+    }
+    
+    .card__image img {
+        max-width: 60%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .card__name {
+        font-size: 12px;
+    }
+    
+    .typeName {
+        font-size: 9px;
+        padding: 1px 3px;
+    }
+    
+    .title {
+        font-size: 9px;
+    }
+}
